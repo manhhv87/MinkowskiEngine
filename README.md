@@ -1,8 +1,9 @@
-[pypi-image]: https://badge.fury.io/py/MinkowskiEngine.svg
-[pypi-url]: https://pypi.org/project/MinkowskiEngine/
-[pypi-download]: https://img.shields.io/pypi/dm/MinkowskiEngine
-[slack-badge]: https://img.shields.io/badge/slack-join%20chats-brightgreen
-[slack-url]: https://join.slack.com/t/minkowskiengine/shared_invite/zt-piq2x02a-31dOPocLt6bRqOGY3U_9Sw
+### [Note]
+This repository integrates the [official NVIDIA repository](https://github.com/NVIDIA/MinkowskiEngine) and [shwoo93's repository](https://github.com/shwoo93/MinkowskiEngine/tree/bbc30ef581ea6deb505976b663f5fc2358a83749), incorporating a new custom kernel for depth-wise convolution. It has been updated for compatibility with the latest stable version of PyTorch, 2.2.1, and CUDA 11.8.
+
+For detailed installation instructions, please refer to [my blog post]().
+Thank you.
+
 
 # Minkowski Engine
 
