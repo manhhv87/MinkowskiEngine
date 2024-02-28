@@ -1,6 +1,30 @@
 ### [Note]
 This repository integrates the [official NVIDIA repository](https://github.com/NVIDIA/MinkowskiEngine) and [shwoo93's repository](https://github.com/shwoo93/MinkowskiEngine/tree/bbc30ef581ea6deb505976b663f5fc2358a83749), incorporating a new custom kernel for depth-wise convolution. It has been updated for compatibility with the latest stable version of PyTorch, 2.2.1, and CUDA 11.8.
 
+For quick start, refer below.
+
+1. git clone
+```
+git clone https://github.com/leadbreak/MinkowskiEngine
+```
+2. move to docker folder
+```
+cd MinkowskiEngine/docker
+```
+3. build docker image
+```
+docker build -t minkowski_engine .
+```
+4. run with docker image
+```
+python3 setup.py install --force_cuda --blas=openblas
+```
+5. done
+```
+pip show minkowskiengine
+```
+<img src="https://nvidia.github.io/MinkowskiEngine/_images/segmentation_3d_net.png">
+
 For detailed installation instructions, please refer to [my blog post](https://brunch.co.kr/@bfcced03a6054df/18).
 Thank you.
 
