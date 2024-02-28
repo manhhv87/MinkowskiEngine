@@ -1,6 +1,3 @@
-### [Note]
-This repo contains a new custom CUDA kernel for depth-wise convolutions, which the original MinkowskiEngine does not support.
-
 [pypi-image]: https://badge.fury.io/py/MinkowskiEngine.svg
 [pypi-url]: https://pypi.org/project/MinkowskiEngine/
 [pypi-download]: https://img.shields.io/pypi/dm/MinkowskiEngine
@@ -191,7 +188,7 @@ python setup.py install
 ```
 git clone https://github.com/NVIDIA/MinkowskiEngine
 cd MinkowskiEngine
-docker build -t MinkowskiEngine docker
+docker build -t minkowski_engine docker
 ```
 
 Once the docker is built, check it loads MinkowskiEngine correctly.

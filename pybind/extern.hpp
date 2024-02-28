@@ -615,15 +615,15 @@ void instantiate_gpu_func(py::module &m, const std::string &dtypestr) {
   m.def((std::string("ConvolutionBackwardGPU") + dtypestr).c_str(),
         &minkowski::ConvolutionBackwardGPU<coordinate_type, TemplatedAllocator>,
         py::call_guard<py::gil_scoped_release>());
-  
+
   m.def((std::string("DepthwiseConvolutionForwardGPU") + dtypestr).c_str(),
         &minkowski::DepthwiseConvolutionForwardGPU<coordinate_type, TemplatedAllocator>,
         py::call_guard<py::gil_scoped_release>());
-  
+
   m.def((std::string("DepthwiseConvolutionBackwardGPU") + dtypestr).c_str(),
         &minkowski::DepthwiseConvolutionBackwardGPU<coordinate_type, TemplatedAllocator>,
         py::call_guard<py::gil_scoped_release>());
-
+        
   m.def((std::string("ConvolutionTransposeForwardGPU") + dtypestr).c_str(),
         &minkowski::ConvolutionTransposeForwardGPU<coordinate_type,
                                                    TemplatedAllocator>,

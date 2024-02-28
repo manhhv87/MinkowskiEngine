@@ -1,10 +1,3 @@
-# Copyright (c) Meta Platforms, Inc. and affiliates.
-
-# All rights reserved.
-
-# This source code is licensed under the license found in the
-# LICENSE file in the root directory of this source tree.
-
 import math
 from typing import Union
 
@@ -127,9 +120,9 @@ class MinkowskiDepthwiseConvolution(MinkowskiModuleBase):
                 dilation=dilation,
                 dimension=dimension,
             )
-        
+
         self.in_channels = in_channels
-        
+
         self.kernel_generator = kernel_generator
         self.dimension = dimension
         self.use_cuda_kernel = use_cuda_kernel
@@ -141,7 +134,7 @@ class MinkowskiDepthwiseConvolution(MinkowskiModuleBase):
         self.convolution_mode = convolution_mode
         self.conv = MinkowskiDepthwiseConvolutionFunction()
         self.reset_parameters()
-    
+
     def reset_parameters(self, is_transpose=False):
         with torch.no_grad():
             n = (
@@ -165,7 +158,7 @@ class MinkowskiDepthwiseConvolution(MinkowskiModuleBase):
             self.kernel_generator.kernel_dilation,
         )
         return self.__class__.__name__ + s
-    
+
     def forward(
         self,
         input: SparseTensor,
@@ -176,7 +169,7 @@ class MinkowskiDepthwiseConvolution(MinkowskiModuleBase):
         assert (
             self.in_channels == input.shape[1]
         ), f"Channel size mismatch {self.in_channels} != {input.shape[1]}"
-        
+
         cm = input._manager
         out_key = _get_coordinate_map_key(
             input, coordinates, None

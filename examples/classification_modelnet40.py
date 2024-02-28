@@ -34,8 +34,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 
 import MinkowskiEngine as ME
-# from examples.pointnet import (
-from pointnet import (    
+from examples.pointnet import (
     PointNet,
     MinkowskiPointNet,
     CoordinateTransformation,
@@ -43,8 +42,7 @@ from pointnet import (
     stack_collate_fn,
     minkowski_collate_fn,
 )
-# from examples.common import seed_all
-from common import seed_all
+from examples.common import seed_all
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--voxel_size", type=float, default=0.05)

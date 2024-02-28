@@ -1,12 +1,3 @@
-/* 
-Copyright (c) Meta Platforms, Inc. and affiliates.
-
-All rights reserved.
-
-This source code is licensed under the license found in the
-LICENSE file in the root directory of this source tree.
-*/
-
 #ifndef GPU_DEPTHWISE_CONVOLUTION
 #define GPU_DEPTHWISE_CONVOLUTION
 
@@ -46,7 +37,7 @@ matmulDwconv(const Dtype *__restrict__ A, const int wA, const int hA, //
 
   const Itype in_row = y < hA ? in_map[y] : 0;
   const Itype out_row = y < hA ? out_map[y] : 0;
-  
+
   if (y < hA && x < wB)
     atomicAdd(&C[wB * out_row + x], A[wA * in_row + x] * B[x]);
 }
@@ -106,7 +97,7 @@ matmulDwconv2(const Dtype *__restrict__ A, const int wA, const int hA, //
 
     if (tx == ty && x < wB)
         atomicAdd(&E[x], Esub);
-    
+
     if (y < hA && x < wA)
         atomicAdd(&C[wA * in_row + x], A[wA * out_row + x] * B[x]);
 #ifdef DEBUG

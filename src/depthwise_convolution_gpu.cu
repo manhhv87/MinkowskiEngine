@@ -1,12 +1,3 @@
-/* 
-Copyright (c) Meta Platforms, Inc. and affiliates.
-
-All rights reserved.
-
-This source code is licensed under the license found in the
-LICENSE file in the root directory of this source tree.
-*/
-
 #include <iostream>
 #include "coordinate_map.hpp"
 #include "coordinate_map_key.hpp"
@@ -55,7 +46,7 @@ at::Tensor DepthwiseConvolutionForwardGPU(
 
     ASSERT(in_feat.size(1) == kernel.size(1),
             "Input feature size and kernel size mismatch");
-    
+
     coordinate_map_key_type in_key = p_in_map_key->get_key();
     ASSERT(p_map_manager->exists(in_key), ERROR_MAP_NOT_FOUND);
 
@@ -76,7 +67,7 @@ at::Tensor DepthwiseConvolutionForwardGPU(
       kernel_dilation, //
       region_type,     //
       offset, false /* is_transpose */, false /* is_pool */);
-    
+
     auto const out_nrows = p_map_manager->size(p_out_map_key->get_key());
     at::Tensor out_feat =
         torch::zeros({out_nrows, kernel.size(1)}, in_feat.options());

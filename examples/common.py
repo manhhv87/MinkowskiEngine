@@ -21,7 +21,6 @@
 # Please cite "4D Spatio-Temporal ConvNets: Minkowski Convolutional Neural
 # Networks", CVPR'19 (https://arxiv.org/abs/1904.08755) if you use any part
 # of the code.
-from sqlite3 import SQLITE_CREATE_TRIGGER
 import numpy as np
 import random
 import time
@@ -102,7 +101,3 @@ def seed_all(random_seed):
     # torch.backends.cudnn.benchmark = False
     np.random.seed(random_seed)
     random.seed(random_seed)
-
-
-
-    
