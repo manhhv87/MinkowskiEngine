@@ -1,7 +1,7 @@
 ### [Note]
 This repository integrates the [official NVIDIA repository](https://github.com/NVIDIA/MinkowskiEngine) and [shwoo93's repository](https://github.com/shwoo93/MinkowskiEngine/tree/bbc30ef581ea6deb505976b663f5fc2358a83749), incorporating a new custom kernel for depth-wise convolution. It has been updated for compatibility with the latest stable version of PyTorch, 2.2.1, and CUDA 11.8.
 
-For detailed installation instructions, please refer to [my blog post]().
+For detailed installation instructions, please refer to [my blog post](https://brunch.co.kr/@bfcced03a6054df/18).
 Thank you.
 
 
