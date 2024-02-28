@@ -23,7 +23,7 @@ python3 setup.py install --force_cuda --blas=openblas
 ```
 pip show minkowskiengine
 ```
-<img src="![image](https://github.com/leadbreak/MinkowskiEngine/assets/71580035/39df7af6-1303-4493-993a-5bcf9626fccc)">
+<img src="https://github.com/leadbreak/MinkowskiEngine/assets/71580035/39df7af6-1303-4493-993a-5bcf9626fccc">
 
 For detailed installation instructions, please refer to [my blog post](https://brunch.co.kr/@bfcced03a6054df/18).
 Thank you.
